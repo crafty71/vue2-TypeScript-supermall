@@ -13,7 +13,7 @@
 // 生成环境: production
 // 测试环境: test
 
-const BASE_URL = "http://123.207.32.32:7888/api/hy66";
+const BASE_URL = "xxx";
 const TIME_OUT = 10000;
 
 export { BASE_URL, TIME_OUT };
