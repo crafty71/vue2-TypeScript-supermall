@@ -1,33 +1,33 @@
 <template>
-  <div class="shop-info" v-if="Object.keys(shop).length !== 0">
+  <div class="shop-info" v-if="Object.keys(shop)?.length !== 0">
     <div class="shop-top">
-      <img :src="shop.shopLogo" alt="" v-if="shop.shopLogo" />
-      <span class="title">{{ shop.name }}</span>
+      <img :src="shop?.shopLogo" alt="" v-if="shop?.shopLogo" />
+      <span class="title">{{ shop?.name }}</span>
     </div>
     <div class="shop-middle">
       <div class="shop-middle-item shop-middle-left">
         <div class="info-sells">
           <div class="sells-count">
-            {{ shop.cSells }}
+            {{ shop?.cSells }}
           </div>
           <div class="sells-text">总销量</div>
         </div>
         <div class="info-goods">
           <div class="goods-count">
-            {{ shop.cGoods }}
+            {{ shop?.cGoods }}
           </div>
           <div class="goods-text">全部宝贝</div>
         </div>
       </div>
       <div class="shop-middle-item shop-middle-right">
         <table>
-          <tr :key="index" v-for="(item, index) in shop.score">
-            <td>{{ item.name }}</td>
-            <td :class="{ 'score-better': item.isBetter }" class="score">
-              {{ item.score }}
+          <tr :key="index" v-for="(item, index) in shop?.score">
+            <td>{{ item?.name }}</td>
+            <td :class="{ 'score-better': item?.isBetter }" class="score">
+              {{ item?.score }}
             </td>
-            <td :class="{ 'better-more': item.isBetter }" class="better">
-              <span>{{ item.isBetter ? "高" : "低" }}</span>
+            <td :class="{ 'better-more': item?.isBetter }" class="better">
+              <span>{{ item?.isBetter ? "高" : "低" }}</span>
             </td>
           </tr>
         </table>
@@ -48,7 +48,7 @@ import { DetailStoreModule } from "../store";
 })
 export default class extends Vue {
   get shop() {
-    return DetailStoreModule.productDetail.shopInfo;
+    return DetailStoreModule.productDetail?.shopInfo;
   }
 }
 </script>

@@ -15,13 +15,27 @@ const routes: Array<RouteConfig> = [
     component: HomeView,
   },
   {
-    path: "/about",
-    name: "about",
+    path: "/category/",
+    name: "Category",
+    component: () =>
+      import(
+        /* webpackChunkName: "about" */ "../views/category/CategoryIndex.vue"
+      ),
+  },
+  {
+    path: "/mine/",
+    name: "Mine",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/mine/MineIndex.vue"),
+  },
+  {
+    path: "/cart",
+    name: "cart",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+      import(/* webpackChunkName: "about" */ "../views/cart/CartIndex.vue"),
   },
   {
     path: "/detail/:id",

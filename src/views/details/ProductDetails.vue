@@ -3,6 +3,7 @@
     <detail-banner />
     <product-info />
     <shop-info />
+    <detail-images-info />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import { DetailStoreModule } from "./store";
 import detailBanner from "./childCom/detailBanner.vue";
 import productInfo from "./childCom/productInfo.vue";
 import shopInfo from "./childCom/shopInfo.vue";
+import detailImagesInfo from "./childCom/detailImagesInfo.vue";
 
 @Component({
   name: "productDetail",
@@ -19,6 +21,7 @@ import shopInfo from "./childCom/shopInfo.vue";
     detailBanner,
     productInfo,
     shopInfo,
+    detailImagesInfo,
   },
 })
 export default class extends Vue {

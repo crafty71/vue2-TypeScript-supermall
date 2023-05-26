@@ -24,7 +24,7 @@ import { HomeStoreModule } from "../store";
 export default class extends Vue {
   /**
    * @description: 计算属性 获取轮播图
-   * @return {*}
+   * @return {*} IHomeMultiDataUse
    */
   get homeMultiData(): IHomeMultiDataUse {
     return HomeStoreModule.HomeMultiData;
